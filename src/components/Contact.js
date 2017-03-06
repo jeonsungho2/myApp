@@ -22,17 +22,17 @@ class Contact extends React.Component {
       }]
     };
 
-    this.hanleChange = this.hanleChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  hanleChange(e) {
+  handleChange(e) {
     this.setState({
       keyword: e.target.value
     });
   }
 
   render() {
-    const mapToComponets = (data) => {
+    const mapToComponents = (data) => {
       data.sort();
       data = data.filter(
         (contact) => {
@@ -54,8 +54,8 @@ class Contact extends React.Component {
           name="keyword"
           placeholder="Search"
           value={this.state.keyword}
-          onChange={this.hanleChange}/>
-        <div>{mapToComponets(this.state.contactData)}</div>
+          onChange={this.handleChange}/>
+        <div>{mapToComponents(this.state.contactData)}</div>
       </div>
     )
   }
